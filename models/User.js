@@ -34,33 +34,33 @@ const UserSchema = new mongoose.Schema(
       minlength: [6, 'Password must be at least 6 characters'],
       select: false
     },
-    location: {
-      type: {
-        type: String,
-        enum: ['Point'],
-        default: 'Point'
-      },
-      coordinates: {
-        type: [Number],
-        index: '2dsphere'
-      },
-      address: {
-        type: String,
-        required: [true, 'Please add an address']
-      },
-      city: {
-        type: String,
-        required: [true, 'Please add a city']
-      },
-      state: {
-        type: String,
-        required: [true, 'Please add a state']
-      },
-      zipcode: {
-        type: String,
-        required: [true, 'Please add a zipcode']
-      }
-    },
+    // location: {
+    //   type: {
+    //     type: String,
+    //     enum: ['Point'],
+    //     default: 'Point'
+    //   },
+    //   coordinates: {
+    //     type: [Number],
+    //     index: '2dsphere'
+    //   },
+    //   address: {
+    //     type: String,
+    //     required: [true, 'Please add an address']
+    //   },
+    //   city: {
+    //     type: String,
+    //     required: [true, 'Please add a city']
+    //   },
+    //   state: {
+    //     type: String,
+    //     required: [true, 'Please add a state']
+    //   },
+    //   zipcode: {
+    //     type: String,
+    //     required: [true, 'Please add a zipcode']
+    //   }
+    // },
     resetPasswordToken: String,
     resetPasswordExpire: Date
   },
